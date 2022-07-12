@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+    header {
+      background-color: black;
+      min-width: 600px;
+    }
+    header>.p1 {
+      margin: auto;
+      width: 600px;
+      color: white;
+    }
+    .p2 {
+      width: 600px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    #d1 {
+      margin: auto;
+      width: 600px;
+    }
+    #d1>div {
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      background-color: pink;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 200%;
+    }
+    #d1>div:hover {
+      background-color: red;
+    }
+    #d1>:nth-child(3n+2) {
+      margin-left: 210px;
+      margin-top: -40px;
+    }
+    #d1>:nth-child(3n+3) {
+      margin-left: 420px;
+      margin-top: -40px;
+      margin-bottom: 15px;
+    }
+    .p3 {
+      border-bottom: 1px solid;
+      margin: auto;
+      width: 600px;
+    }
+    .p4 {
+      border-bottom: transparent;
+    }
+    .p5 {
+      margin-top: 20px;
+      text-align: center;
+      background-color: violet;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="p1">hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <p class="p2">页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  <div id="d1">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3">link</p>
+    <p class="p3 p4">link</p>
+    <p class="p5">©版权所有<br>本页所有布局均使用块元素</p>
+</body>
+</html>
