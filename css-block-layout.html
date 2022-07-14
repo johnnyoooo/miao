@@ -63,6 +63,31 @@
       background-color: violet;
       overflow: hidden;
     }
+    .inline {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 600px;
+      word-spacing: 25px;
+    }
+    .inline>div {
+     margin: 15px 0;
+    }
+    .inline span {
+      display: inline-block;
+      box-sizing: border-box;
+      height: 40px;
+      width: 180px;
+      border: 3px solid;
+      line-height: 34px;
+      vertical-align: bottom;
+      text-align: center;
+      background-color: pink;
+    }
+    .inline span:hover {
+      background-color: red;
+    }
   </style>
 </head>
 <body>
@@ -83,6 +108,28 @@
     <div>边框宽度3px</div>
     <div>产品</div>
     <div>产品</div>
+  </div>
+  <div class="inline">
+    <div>
+      <span>宽180高40(包含边框)</span>
+      <span>产品</span>
+      <span>产品</span>
+    </div>
+    <div>
+      <span>水平间隙30px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </div>
+    <div>
+      <span>垂直间隙15px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </div>
+    <div>
+      <span>边框宽度3px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </div>
   </div>
     <p class="p3">link</p>
     <p class="p3">link</p>
