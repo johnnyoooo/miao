@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2022 by anonymous (http://jsbin.com/vezucovici/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    .ios-checkbox{
+      position:relative;
+      width:100px;
+      height:50px;
+    }
+    .circle{
+      position:absolute;
+      display:block;
+      width:50px;
+      height:50px;
+      border:1px solid;
+      border-radius:50%;
+      left:0px;
+      z-index:999;
+      transition:1s;
+      background-color: white;
+    }
+    input:checked + .circle{
+      left:50px;
+      transition:1s;
+    }
+    .border{
+      width:100px;
+      height:50px;
+      border:1px solid;
+      border-radius:20px;
+      position:absolute;
+      top:0px;
+      transition: 1s;
+    }
+    input:checked ~ .border{
+      background-color:green;
+      transition: 1s;
+    }
+    input{
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="ios-checkbox">
+    <input type="checkbox" id="circle">
+    <label class="circle" for="circle"></label>
+    <div class="border"></div>
+  </div>
+</body>
+</html>
