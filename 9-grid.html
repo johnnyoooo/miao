@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/less">
+    p {
+      text-align: center;
+    }
+    span {
+      width: 40px;
+      height: 40px;
+      border: 3px solid;
+      text-align: center;
+      line-height: 40px;
+      float: left;
+      border-right: 0px;
+      border-bottom: 0px;
+      &:nth-child(3n+3) {
+        border-right: 3px solid;
+      }
+      &:nth-last-child(-n+3) {
+        border-bottom: 3px solid;
+      }
+    }
+    section {
+      width: 132px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <p>float layout</p>
+  <section>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+    <span>9</span>
+  </section>
+</body>
+<script src="less.js"></script>
+</html>
