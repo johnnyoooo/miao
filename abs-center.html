@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/less">
+    .first {
+      width: 250px;
+      height: 250px;
+      border: 1px solid;
+      position: relative;
+      margin: 5px auto;
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        position: absolute;
+        text-align: center;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        xtransform: translate(-50%, -50%);
+        line-height: 100px;
+      }
+    }
+    .second {
+      width: 250px;
+      height: 250px;
+      border: 1px solid;
+      margin: 5px auto;
+      text-align: center;
+      line-height: 250px;
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        display: inline-block;
+        line-height: 100px;
+        text-align: center;
+      }
+    }
+    .third {
+      width: 250px;
+      height: 250px;
+      border: 1px solid;
+      margin: 5px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        line-height: 100px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="first">
+    <div>position</div>
+  </section>
+  <section class="second">
+    <div>inline-block</div>
+  </section>
+  <section class="third">
+    <div>flex</div>
+  </section>
+</body>
+<script src="less.js"></script>
+</html>
