@@ -16,19 +16,39 @@
       text-align: center;
       line-height: 40px;
       float: left;
-      border-right: 0px;
-      border-bottom: 0px;
-      &:nth-child(3n+3) {
-        border-right: 3px solid;
-      }
-      &:nth-last-child(-n+3) {
-        border-bottom: 3px solid;
+      margin: 0px -3px -3px 0px;
+      position: relative;
+      &:hover {
+        border:3px solid pink;
+        z-index: 9;
       }
     }
-    section {
+     section{
       width: 132px;
       margin-left: auto;
       margin-right: auto;
+      height: 132px;
+    }
+    ul {
+      list-style-type: none;
+      margin:0px auto;
+      width: 132px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0px;
+      >li {
+        width: 40px;
+        height: 40px;
+        border: 3px solid;
+        margin: 0px -3px -3px 0px;
+        text-align: center;
+        line-height: 40px;
+        position: relative;
+        &:hover {
+          border:3px solid pink;
+          z-index: 9;
+        }
+      }
     }
   </style>
 </head>
@@ -45,6 +65,18 @@
     <span>8</span>
     <span>9</span>
   </section>
+  <p>flex layout</p>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
 </body>
 <script src="less.js"></script>
 </html>
