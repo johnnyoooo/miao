@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=720px, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/less">
+    @font-face {
+      font-family: mi-icon;
+      src: url(./mi-iconfont.ttf);
+    }
+    body {
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      height: 84px;
+      background: #f2f2f2;
+      color: #666;
+      .header-left {
+        display: flex;
+        align-items: center;
+        margin:0 20px;
+        img {
+        width: 51px;
+        height: 51px;
+        }
+      }
+      .header-middle {
+        height: 62px;
+        font-size: 54px;
+        color: rgba(0,0,0,.3);
+        flex-grow: 1;
+        font-size: 30px;
+        width: 520px;
+        height: 62px;
+        box-sizing: border-box;
+        border: 1px solid #e5e5e5;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "\E616";
+          font-family: mi-icon;
+          vertical-align: middle;
+          font-size: 40px;
+        }
+      }
+      .header-right {
+        padding: 10px;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <img src="https://m.mi.com/static/img/icon-header-logo3.ddf2a1c313.png">
+    </div>
+    <div class="header-middle">
+      搜索商品名称
+    </div>
+    <div class="header-right">
+      <img src="https://m.mi.com/static/img/icon-user.23496a0116.png">
+    </div>
+  </div>
+</body>
+<script src="./less.js"></script>
+</html>
