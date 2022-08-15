@@ -1247,3 +1247,263 @@
   var money = s - (day - n) * k
   console.log(money)
 </script>
+
+<script id="narcissistic">
+  var n = Number(prompt("请输入一个三位数"))
+  var sum = 0
+  var i = n
+  while(i > 0) {
+    a = i % 10
+    sum = sum + a ** 3
+    i = (i - a) / 10
+  }
+  if(sum == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script id="narcissistics">
+  for (var i = 100; i < 1000; i += 1) {
+    var n = i
+    var sum = 0
+    while(n > 0) {
+      a = n % 10
+      sum = sum + a ** 3
+      n = (n - a) / 10
+    }
+    if(sum == i) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="palindrom">
+  var a = Number(prompt('输入一个整数'))
+  var i = 1
+  var w = 10
+  var j = a
+  var x = a
+  var 回文数 = true
+  while(a / w > 1) {
+    var i = i + 1
+    var w = Math.pow(10, i)
+  }
+  while(j > 0) {
+    var b = j % 10
+    var c = Math.trunc(x / Math.pow(10, i - 1))
+    j = (j - b) / 10
+    x = x - c * Math.pow(10, i - 1)
+    i--
+    if(b !== c) {
+      回文数 = false
+      break
+    }
+  }
+  if(回文数) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script id="weekday">
+  var year = Number(prompt("请输入年份"))
+  var month = Number(prompt("请输入月份"))
+  if(month == 1 || month == 2) {
+    m = month + 12
+    year = year - 1
+  } else {
+    m = month
+  }
+  var c = Math.trunc(year / 100)
+  var y = year % 100
+  var D = Math.trunc(c / 4) - 2 * c + y + Math.trunc(y / 4) + Math.trunc(13 * (m + 1) / 5)
+  var W = D % 7
+  console.log(W)
+</script>
+
+<script id="complete-number">
+  var n = Number(prompt('请输入一个整数'))
+  var n_sqrt = Math.sqrt(n)
+  var sum = 1
+  for(var i = 2; i <= n_sqrt; i++) {
+    if(n % i == 0) {
+      if(i == n_sqrt) {
+        sum = sum + i
+      } else {
+        sum = sum + i + n / i
+      }
+    }
+  }
+  if(sum == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script id="complete-numbers">
+  for(var i = 2; i <= 1000; i++) {
+    var n = i
+    var n_sqrt = Math.sqrt(n)
+    var sum = 1
+    for(var j = 2; j <= n_sqrt; j++) {
+      if(n % j == 0) {
+        if(j == n_sqrt) {
+          sum = sum + j
+        } else {
+          sum = sum + j + n / j
+        }
+      }
+    }
+    if(sum == n) {
+      console.log(n)
+    }
+  }
+</script>
+
+<script id="prime">
+  var n = Number(prompt('请输入一个整数'))
+  var n_sqrt = Math.sqrt(n)
+  var 是素数 = true
+  if(n == 1) {
+    是素数 = false
+  }
+  for(var i = 2; i <= n_sqrt; i++) {
+    if(n % i == 0) {
+     是素数 = false
+    }
+  }
+  if(是素数) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+
+<script id="primes">
+  for(var i = 2; i <= 100; i++) {
+    var n = i
+    var n_sqrt = Math.sqrt(n)
+    var 是素数 = true
+    for(var j = 2; j <= n_sqrt; j++) {
+      if(n % j == 0) {
+        是素数 = false
+      }
+    }
+    if(是素数) {
+      console.log(i)
+    }
+  }
+</script>
+
+<script id="itob">
+  var n = Number(prompt('输入一个整数'))
+  var a = 1
+  var c = ""
+  var flag = true
+  if(n == 0) {
+    c = "0"
+  }
+  if(n > 0) {
+    while(n / Math.pow(10 , a) > 1) {
+      a++
+    }
+  } else {
+    while(n / Math.pow(10 , a) < -1) {
+      a++
+    }
+  }
+  while(n !== 0) {
+    b = Math.trunc(n / Math.pow(10 , a - 1))
+    if(b < 0) {
+      if(flag) {
+        c = c + b
+        flag = false
+      } else {
+        var d = -b
+        c = c + d
+      }
+    } else {
+      c = c + b
+    }
+    n = n - b * Math.pow(10 , a - 1)
+    a--
+  }
+  console.log(c)
+</script>
+
+<script id="lcf&lcm">
+  var a = Number(prompt('输入一个整数'))
+  var b = Number(prompt('输入一个整数'))
+  var y = 1
+  var i = 2
+  while(true) {
+    if(a % i == 0 && b % i == 0) {
+      y = y * i
+      a = a / i
+      b = b / i
+    } else {
+      i++
+    }
+    var a_sqrt = Math.sqrt(a)
+    var b_sqrt = Math.sqrt(b)
+    var a是素数 = true
+    var b是素数 = true
+    for(var j = 2; j <= a_sqrt; j++) {
+      if(a % i == 0) {
+      a是素数 = false
+      }
+    }
+    for(var j = 2; j <= b_sqrt; j++) {
+      if(b % i == 0) {
+      b是素数 = false
+      }
+    }
+    if(a == 1 || b == 1 || a是素数 || b是素数) {
+      break
+    }
+  }
+  var d = y * a * b
+  console.log(y, d)
+</script>
+
+<script id="sqrt">
+  var a = Number(prompt("请输入一个大于等于零的数"))
+  var i = 0
+  while(i * i < a) {
+    i++
+  }
+  if(i * i == a) {
+    console.log(i)
+  } else {
+    i--
+    while(i * i < a) {
+      i += 0.1
+    }
+  }
+  if(i * i == a) {
+    console.log(i)
+  } else {
+    i -= 0.1
+    while(i * i < a) {
+      i += 0.01
+    }
+  }
+  if(i * i == a) {
+    console.log(i)
+  } else {
+    i -= 0.01
+    while(i * i < a) {
+      i += 0.001
+    }
+  }
+  if(i * i == a) {
+    console.log(i)
+  } else {
+    i -= 0.001
+    console.log(i.toFixed(3))
+  }
+</script>
