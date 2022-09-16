@@ -1,5 +1,5 @@
   var johnnyoooo = {
-    chunk : (ary, size) => {
+    chunk : function(ary, size)  {
       let arynum = Math.ceil(ary.length / size)
       let result = []
       for(let i = 0; i < arynum; i++) {
