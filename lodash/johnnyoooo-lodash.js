@@ -15,4 +15,13 @@
       }
       return result
     } ,
+
+    compact : function(ary) {
+      return ary.reduce((result, val) => {
+        if(val) {
+          result.push(val)
+        }
+        return result
+      }, [])
+    } ,
   }
