@@ -14,5 +14,5 @@
         result.push(separy)
       }
       return result
-    }
+    } ,
   }
